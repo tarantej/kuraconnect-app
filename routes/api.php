@@ -29,8 +29,8 @@ Route::prefix('/user')->name('user.')->namespace('User')->group(function(){
   Route::post('login', [App\Http\Controllers\API\PassportAuthController::class, 'login']);
   Route::post('register', [App\Http\Controllers\API\PassportAuthController::class, 'register']);
   Route::post('dashboard', [App\Http\Controllers\API\PassportAuthController::class, 'dashboard']);
-  Route::get('services', [ServiceController::class, 'index']);
-  Route::get('services/add', [ServiceController::class, 'store']);
+  Route::get('Services', [ServiceController::class, 'index']);
+  Route::get('Services', [ServiceController::class, 'store']);
   Route::get('service-listing', [ServiceListingController::class, 'index']);
 
   Route::post('service-request', [App\Http\Controllers\API\ServiceRequestController::class, 'store']);

@@ -33,10 +33,6 @@ class ServiceController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-
-     public function create(){
-return view('api.services.create');
-     }
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -62,7 +58,7 @@ return view('api.services.create');
 
         // return new Services($service);
 
-        return redirect()->route('api.services.index')
+        return redirect()->route('api.Services.index')
             ->with('success', 'Service created successfully.');
 
     }
