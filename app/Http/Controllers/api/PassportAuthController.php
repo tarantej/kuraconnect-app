@@ -40,8 +40,8 @@ $input = $request->all();
         $success['token'] =  $user->createToken('')-> accessToken;
         $success['name'] =  $user->name;
 
-        //return view('api.user.dashboard', compact($user));
-return response()->json(['success'=>$success], $this-> successStatus);
+        return view('API.user.dashboard', compact($user));
+//return response()->json(['success'=>$success], $this-> successStatus);
     }
 
     /**
@@ -58,8 +58,8 @@ return response()->json(['success'=>$success], $this-> successStatus);
         if (auth()->attempt($data)) {
             $token = auth()->user()->createToken('')->accessToken;
             // return response()->json(['token' => $token], 200);
-            return response()->json(['message' => 'Welcome to Dashboard'], 200);
-            //return view('API.user.dashboard');
+            //return response()->json(['message' => 'Welcome to Dashboard'], 200);
+            return view('API.user.dashboard');
         } else {
             return response()->json(['error' => 'Not Allowed'], 401);
         }
@@ -75,8 +75,8 @@ return response()->json(['success'=>$success], $this-> successStatus);
 
      $user = auth()->user();
 
-     //return view('API.user.dashboard', compact($user));
-return response()->json($user);
+     return view('API.user.dashboard', compact($user));
+//return response()->json($user);
 
 
     }
