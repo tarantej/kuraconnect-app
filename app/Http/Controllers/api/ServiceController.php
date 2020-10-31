@@ -41,11 +41,11 @@ class ServiceController extends Controller
             'description' => 'nullable',
         ]);
 
-        Services::create($request->all());
+        $service = Services::create($request->all());
 
         // $input = $request->all();
         // $service = Services::create($input);
-        // return response()->json($service);
+
         // $service = new Services([
 
         // 'service_name' => $request->get('service_name'),
@@ -58,8 +58,9 @@ class ServiceController extends Controller
 
         // return new Services($service);
 
-        return redirect()->route('api.Services.index')
-            ->with('success', 'Service created successfully.');
+         return response()->json($service);
+
+        //return redirect()->route('api.Services.index')->with('success', 'Service created successfully.');
 
     }
 
