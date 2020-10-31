@@ -39,13 +39,9 @@ $input = $request->all();
         $user = User::create($input);
         $success['token'] =  $user->createToken('')-> accessToken;
         $success['name'] =  $user->name;
-<<<<<<< HEAD
 
         return view('api.user.dashboard', compact($user));
 //return response()->json(['success'=>$success], $this-> successStatus);
-=======
-return response()->json(['success'=>$success], $this-> successStatus);
->>>>>>> efe2850f272e71493a5df0734a461bc5437977e3
     }
 
     /**
@@ -70,11 +66,6 @@ return response()->json(['success'=>$success], $this-> successStatus);
 
         //return response()->json($data);
 
-<<<<<<< HEAD
-
-=======
-
->>>>>>> efe2850f272e71493a5df0734a461bc5437977e3
 
 
     }
@@ -84,11 +75,7 @@ return response()->json(['success'=>$success], $this-> successStatus);
 
      $user = auth()->user();
 
-<<<<<<< HEAD
      return view('api.user.dashboard', compact($user));
-=======
-     return response()->json(['user' => $user], 200);
->>>>>>> efe2850f272e71493a5df0734a461bc5437977e3
 
     }
 
