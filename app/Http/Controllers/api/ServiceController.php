@@ -5,7 +5,8 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 //use App\Models\Services;
 use Illuminate\Http\Request;
-use App\Http\Resources\Services;
+use App\Http\Resources\Services as ServiceResource;
+use App\Models\Services;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Validator;
@@ -20,9 +21,11 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $service = Services::all();
 
-        return response()->json($service);
+        return new ServiceResource(Services::all());
+        //$service = Services::all();
+
+        //return response()->json($service);
 
         //return view('api.Services.index', compact('service'));
     }
