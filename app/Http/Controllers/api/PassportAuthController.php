@@ -40,8 +40,8 @@ $input = $request->all();
         $success['token'] =  $user->createToken('')-> accessToken;
         $success['name'] =  $user->name;
 
-        return view('api.user.dashboard', compact($user));
-//return response()->json(['success'=>$success], $this-> successStatus);
+        //return view('api.user.dashboard', compact($user));
+return response()->json(['success'=>$success], $this-> successStatus);
     }
 
     /**
@@ -58,8 +58,8 @@ $input = $request->all();
         if (auth()->attempt($data)) {
             $token = auth()->user()->createToken('')->accessToken;
             // return response()->json(['token' => $token], 200);
-            //return response()->json(['message' => 'Welcome to Dashboard'], 200);
-            return view('api.user.dashboard');
+            return response()->json(['message' => 'Welcome to Dashboard'], 200);
+            //return view('API.user.dashboard');
         } else {
             return response()->json(['error' => 'Not Allowed'], 401);
         }
@@ -75,7 +75,9 @@ $input = $request->all();
 
      $user = auth()->user();
 
-     return view('api.user.dashboard', compact($user));
+     //return view('API.user.dashboard', compact($user));
+return response()->json($user);
+
 
     }
 
@@ -85,6 +87,6 @@ $user = $request->user();
         // the full object of the customer as containted in the able would
         // be available now
 
-        return view('api.user.dashboard', compact($user));
+        return view('API.user.dashboard', compact($user));
     }
 }
