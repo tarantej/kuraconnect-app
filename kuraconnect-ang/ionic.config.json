@@ -1,0 +1,7 @@
+{
+  "name": "kuraconnect-ang",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
