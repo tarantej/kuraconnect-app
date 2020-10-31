@@ -35,7 +35,7 @@ class ServiceController extends Controller
 
 
      public function create(){
-
+return view('api.services.create');
      }
     public function store(Request $request)
     {
@@ -62,7 +62,7 @@ class ServiceController extends Controller
 
         // return new Services($service);
 
-        return redirect()->route('services.index')
+        return redirect()->route('api.services.index')
             ->with('success', 'Service created successfully.');
 
     }
@@ -75,7 +75,7 @@ class ServiceController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('api.services.show');
     }
 
     /**
@@ -87,7 +87,7 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return view('api.services.update');
     }
 
     /**
@@ -98,6 +98,6 @@ class ServiceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return view('destroy.blade.php');
     }
 }
