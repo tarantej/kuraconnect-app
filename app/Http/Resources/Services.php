@@ -16,7 +16,6 @@ class Services extends JsonResource
     {
         //return parent::toArray($request);
         return [
-            'id' => $this->id,
             'service_name' => $this->service_name,
             'category' => $this->category,
             'description' => $this->description,
