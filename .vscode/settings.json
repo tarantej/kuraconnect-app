@@ -1,3 +1,18 @@
 {
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "sqltools.connections": [
+    {
+      "database": "heroku_e72d80efd58bb3f",
+      "driver": "MySQL",
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "name": "kuraconnectapp",
+      "password": "cc51c7f7",
+      "port": 3306,
+      "previewLimit": 50,
+      "server": "us-cdbr-east-02.cleardb.com",
+      "username": "b898d1cb0067c2"
+    }
+  ]
 }
