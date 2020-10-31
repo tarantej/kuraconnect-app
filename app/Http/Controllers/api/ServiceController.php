@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Models\Services;
+//use App\Models\Services;
 use Illuminate\Http\Request;
+use App\Http\Resources\Services;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Validator;
@@ -41,24 +42,24 @@ class ServiceController extends Controller
             'description' => 'nullable',
         ]);
 
-        $service = Services::create($request->all());
+        //$service = Services::create($request->all());
 
         // $input = $request->all();
         // $service = Services::create($input);
 
-        // $service = new Services([
+        $service = new Services([
 
-        // 'service_name' => $request->get('service_name'),
-        // 'category' => $request->get('category'),
-        // 'description' => $request->get('description')
-        // ]);
+        'service_name' => $request->get('service_name'),
+        'category' => $request->get('category'),
+        'description' => $request->get('description')
+        ]);
 
 
-        //$service->save();
+        $service->save();
 
-        // return new Services($service);
+        return new Services($service);
 
-         return response()->json($service);
+        //return response()->json($service);
 
         //return redirect()->route('api.Services.index')->with('success', 'Service created successfully.');
 
