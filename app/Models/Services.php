@@ -18,4 +18,6 @@ class Services extends Authenticatable
     protected $fillable = [
         'service_name', 'category', 'description'
     ];
+
+    public $timestamps = false;
 }
