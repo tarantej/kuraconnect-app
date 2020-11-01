@@ -13,9 +13,11 @@ class service_listing extends Authenticatable
 {
     use HasFactory, HasApiTokens, Notifiable;
 
-    // protected $guard = 'users';
+protected $guard = 'users';
 
      protected $fillable = [
         'logo','service_name', 'category', 'description','location','phone','email', 'website'
     ];
+
+    public $timestamps = false;
 }

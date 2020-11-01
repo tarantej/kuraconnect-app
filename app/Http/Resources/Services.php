@@ -19,7 +19,7 @@ class Services extends JsonResource
             'id' => $this->id,
             'service_name' => $this->service_name,
             'category' => $this->category,
-            'description' => $this->description,
+            'description' => $this->description->NULL,
         ];
     }
 }
