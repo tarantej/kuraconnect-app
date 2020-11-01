@@ -13,7 +13,9 @@ class ServiceDescNull extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('services', function (Blueprint $table) {
+    $table->string('description')->nullable();
+});
     }
 
     /**
@@ -23,6 +25,6 @@ class ServiceDescNull extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('services');
     }
 }
