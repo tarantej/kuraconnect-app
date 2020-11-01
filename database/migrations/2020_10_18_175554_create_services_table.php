@@ -17,7 +17,7 @@ class CreateServicesTable extends Migration
             $table->id();
             $table->string('service_name');
             $table->string('category');
-            $table->string('description')->nullable()->change();
+            $table->string('description')->nullable();
         });
     }
 
