@@ -6,9 +6,10 @@ use App\Http\Controllers\API\PassportAuthController;
 use App\Http\Controllers\API\ServiceController;
 use App\Http\Controllers\API\ServiceListingController;
 use App\Http\Controllers\API\ServiceRequestController;
-use App\Http\Resources\Services;
-use App\Http\Resources\ServiceListing;
+// use App\Http\Resources\Services;
+// use App\Http\Resources\ServiceListing;
 use App\Models\service_listing;
+use App\Models\Services;
 
 
 
@@ -29,9 +30,9 @@ Route::prefix('/user')->name('user.')->namespace('User')->group(function(){
   Route::post('login', [App\Http\Controllers\API\PassportAuthController::class, 'login']);
   Route::post('register', [App\Http\Controllers\API\PassportAuthController::class, 'register']);
   Route::post('dashboard', [App\Http\Controllers\API\PassportAuthController::class, 'dashboard']);
-  Route::get('Services', [ServiceController::class, 'index']);
-  Route::get('Services', [ServiceController::class, 'store']);
-  Route::get('service-listing', [ServiceListingController::class, 'index']);
+  Route::get('services', [App\Http\Controllers\API\ServiceController::class, 'index']);
+  Route::get('services/add', [App\Http\Controllers\API\ServiceController::class, 'store']);
+  Route::get('service-listing', [App\Http\Controllers\API\ServiceListingController::class, 'index']);
 
   Route::post('service-request', [App\Http\Controllers\API\ServiceRequestController::class, 'store']);
   Route::post('emergency', [App\Http\Controllers\API\ServiceRequestController::class, 'emergencyRequest']);
