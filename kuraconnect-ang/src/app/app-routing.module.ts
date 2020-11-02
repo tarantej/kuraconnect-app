@@ -26,6 +26,14 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/user/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/user/register/register.module').then( m => m.RegisterPageModule)
   }
 ];
 
