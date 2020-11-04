@@ -11,7 +11,7 @@ import { User } from '../models/user';
 
 export class AuthService {
   isLoggedIn = false;
-  token:any;
+  token: any;
 
   constructor(
     private http: HttpClient,
@@ -19,9 +19,9 @@ export class AuthService {
     private env: EnvService,
   ) { }
 
-  login(username: String, password: String) {
+  login(username: string, password: string) {
     return this.http.post(this.env.API_URL + 'user/login',
-      {username: username, password: password}
+      {username:username, password: password}
     ).pipe(
       tap(token => {
         this.storage.setItem('token', token)
@@ -38,7 +38,7 @@ export class AuthService {
     );
   }
 
-  register(name: String, username: String, email: String,phone: String, password: String) {
+  register(name: string, username: string, email: string, phone:string, password: string) {
     return this.http.post(this.env.API_URL + 'user/register',
       {name: name, username: username, email: email, phone: phone, password: password}
     )
@@ -65,7 +65,7 @@ export class AuthService {
       'Authorization': this.token["token_type"]+" "+this.token["access_token"]
     });
 
-    return this.http.get<User>(this.env.API_URL + 'user/profile', { headers: headers })
+    return this.http.get<User>(this.env.API_URL + 'user/userInfo', { headers: headers })
     .pipe(
       tap(user => {
         return user;

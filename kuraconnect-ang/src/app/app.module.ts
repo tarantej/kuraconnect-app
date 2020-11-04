@@ -17,7 +17,8 @@ import { NativeStorage } from '@ionic-native/native-storage/ngx';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [
     StatusBar,
