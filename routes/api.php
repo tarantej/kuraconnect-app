@@ -24,6 +24,9 @@ use App\Models\Services;
 |
 */
 
+
+$api = app('Dingo\Api\Routing\Router');
+
 Route::prefix('/user')->name('user.')->namespace('User')->group(function(){
   //All the user routes will be defined here...
 
@@ -64,8 +67,8 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
   //All the admin routes will be defined here...
 });
 
-Route::prefix('/volunteer')->name('admin.')->namespace('Admin')->group(function(){
-  //All the admin routes will be defined here...
+Route::prefix('/volunteer')->name('volunteer.')->namespace('Volunteer')->group(function(){
+  //All the volunteer routes will be defined here...
 });
 
 Route::group(['prefix' => 'user'],function(){
