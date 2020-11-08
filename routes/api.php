@@ -24,9 +24,6 @@ use App\Models\Services;
 |
 */
 
-
-$api = app('Dingo\Api\Routing\Router');
-
 Route::prefix('/user')->name('user.')->namespace('User')->group(function(){
   //All the user routes will be defined here...
 
