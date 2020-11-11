@@ -19,7 +19,8 @@
         "laravel/passport": "^10.0",
         "laravel/sanctum": "^2.7",
         "laravel/tinker": "^2.0",
-        "laravel/ui": "^3.0"
+        "laravel/ui": "^3.0",
+        "twbs/bootstrap": "^4.5"
     },
     "require-dev": {
         "cloudcreativity/json-api-testing": "^3.1",

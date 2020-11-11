@@ -1,8 +1,11 @@
-import React, {Component, Fragment} from 'react';
+import React, { Component, Fragment } from 'react';
 import logo from './images/logo.png';
 import './css/App.css';
 import './css/userLogin.css';
-import { Container, TextField, makeStyles, Button } from '@material-ui/core';
+import './css/bootstrap.min.css';
+import { withStyles, makeStyles, Button, Input, InputLabel, InputAdornment, FormControl } from '@material-ui/core';
+import { grey, red } from '@material-ui/core/colors';
+import { Person, Lock } from '@material-ui/icons';
 
 // const useStyles = makeStyles((theme) => ({
 //   root: {
@@ -13,70 +16,136 @@ import { Container, TextField, makeStyles, Button } from '@material-ui/core';
 //   },
 // }));
 
+const useStyles = makeStyles((theme) => ({
+    margin: {
+        margin: theme.spacing(1),
+    },
+}));
+
+const BlackButton = withStyles((theme) => ({
+    root: {
+        color: theme.palette.getContrastText(grey[900]),
+        padding: '5px 120px',
+        backgroundColor: grey[900],
+        '&:hover': {
+            backgroundColor: grey[800],
+        },
+
+    },
+}))(Button);
+
+const RedButton = withStyles((theme) => ({
+    root: {
+        color: theme.palette.getContrastText(red[500]),
+        padding: '5px 100px',
+        backgroundColor: red[500],
+        '&:hover': {
+            backgroundColor: red[700],
+        },
+    },
+}))(Button);
+
 
 
 
 function App() {
 
-  // const classes = useStyles();
-    return ( 
-      <Fragment>
-      {/* <div className="App"> */}
-      {/* <header className="App-header"> */}
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-      {/* <p>Edit <code>src/App.js</code> and save to reload.</p> */}
-    {/* <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a> */}
-  {/* </header> */}
-    {/* </div> */}
+    const classes = useStyles();
+    return ( <
+        Fragment >
 
-<div>
+        <
+        div >
 
-  <main class="MuiContainer-root MuiContainer-maxWidthXs">
-   
-      <div className="jss1">
-          <img src={logo} className="logo2" alt="logo" />
-      </div>
-      <div class="userLogin">
-      <form class="jss3" noValidate autoComplete="off">
+        <
+        main class = "MuiContainer-root MuiContainer-maxWidthXs userLogin" >
 
-      </form>
-    </div>
-      
-  
-  </main>
-<Container maxWidth="sm" />
+        <
+        div className = "jss1" >
+        <
+        img src = { logo }
+        className = "logo2"
+        alt = "logo" / >
+        <
+        div >
+        <
+        FormControl className = { classes.margin } >
+        <
+        Input id = "username"
+        placeholder = "Username *"
+        startAdornment = { <
+            InputAdornment position = "start" >
+            <
+            Person / >
+            <
+            /InputAdornment>
+        }
+        /> < /
+        FormControl >
+        <
+        /div>
+
+        <
+        div >
+        <
+        FormControl className = { classes.margin } >
+        <
+        Input id = "password"
+        placeholder = "Password *"
+        startAdornment = { <
+            InputAdornment position = "start" >
+            <
+            Lock / >
+            <
+            /InputAdornment>
+        }
+        /> < /
+        FormControl >
+        <
+        /div>
+
+        <
+        BlackButton variant = "contained"
+        color = "primary"
+        size = "large"
+        className = { classes.margin } >
+        Login <
+        /BlackButton>
 
 
-  <form className="userLogin jss3" noValidate autoComplete="off">
-
-  <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl">
-  <input type="text" aria-invalid="false" autocomplete="text" autofocus="" id="username" name="username" required="" class="MuiInputBase-input MuiOutlinedInput-input" value="" />
-  <fieldset aria-hidden="true" class="jss5 MuiOutlinedInput-notchedOutline">
-    <legend class="jss7">
-      <span>Username&nbsp;*</span>
-      </legend>
-      </fieldset>
-  </div>
-
-  <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl">
-  <input type="password" aria-invalid="false" autocomplete="password" autofocus="" id="password" name="password" required="" class="MuiInputBase-input MuiOutlinedInput-input" value="" />
-  <fieldset aria-hidden="true" class="jss5 MuiOutlinedInput-notchedOutline">
-    <legend class="jss7">
-      <span>Password&nbsp;*</span>
-      </legend>
-      </fieldset>
-  </div>
+        <
+        RedButton variant = "contained"
+        color = "secondary"
+        size = "large"
+        className = { classes.margin } >
+        Emergency <
+        /RedButton>
 
 
-  <TextField required id="username" name="username" label="Username" type="text" />
 
-  <TextField required id="password" name="password" label="Password" type="password" />
 
-  
-    </form>
-</div>
+        <
+        /
+        div >
 
-</Fragment>
+
+        <
+        /main>
+
+
+        <
+        /
+        div >
+
+
+
+
+
+
+        <
+        /Fragment>
+
+
 
     );
 }
