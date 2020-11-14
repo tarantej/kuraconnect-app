@@ -18,8 +18,6 @@ use Illuminate\Support\Facades\Auth;
 //     return view('index');
 // });
 
-Route::get('/',[App\Http\Controllers\API\UserController::class,'index']);
-
 Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
   //All the admin routes will be defined here...
 
@@ -34,7 +32,7 @@ Route::get('register',[App\Http\Controllers\admin\RegisterController::class,'ind
 
 
 
-//Auth::routes();
+Auth::routes();
 
 // Route::get('/admin/dashboard', [App\Http\Controllers\admin\DashboardController::class, 'index'])->name('home');
 
