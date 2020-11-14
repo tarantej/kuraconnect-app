@@ -32,7 +32,7 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
 
 
 
-Auth::routes();
+//Auth::routes();
 
 // Route::get('/admin/dashboard', [App\Http\Controllers\admin\DashboardController::class, 'index'])->name('home');
 
@@ -46,6 +46,6 @@ Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

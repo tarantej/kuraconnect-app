@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 const BlackButton = withStyles((theme) => ({
     root: {
         color: theme.palette.getContrastText(grey[900]),
-        padding: '5px 120px',
+        padding: '10px 120px',
         backgroundColor: grey[900],
         '&:hover': {
             backgroundColor: grey[800],
@@ -37,7 +37,7 @@ const BlackButton = withStyles((theme) => ({
 const RedButton = withStyles((theme) => ({
     root: {
         color: theme.palette.getContrastText(red[500]),
-        padding: '5px 100px',
+        padding: '10px 100px',
         backgroundColor: red[500],
         '&:hover': {
             backgroundColor: red[700],
