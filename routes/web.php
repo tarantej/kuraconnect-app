@@ -21,8 +21,8 @@ Route::get('/', function () {
 Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
   //All the admin routes will be defined here...
 
-//   Route::get('login',[App\Http\Controllers\admin\LoginController::class,'index']);
-//   Route::get('register',[App\Http\Controllers\admin\RegisterController::class,'index']);
+  Route::get('login',[App\Http\Controllers\admin\LoginController::class,'index']);
+  Route::get('register',[App\Http\Controllers\admin\RegisterController::class,'index']);
   Route::get('dashboard',[App\Http\Controllers\admin\DashboardController::class,'index'])->name('home');
 
 //   Route::get('/services',[App\Http\Controllers\api\ServiceController::class,'index']);
@@ -34,9 +34,9 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
 
 Auth::routes();
 
-Route::get('/admin/dashboard', [App\Http\Controllers\admin\DashboardController::class, 'index'])->name('home');
+// Route::get('/admin/dashboard', [App\Http\Controllers\admin\DashboardController::class, 'index'])->name('home');
 
-Route::get('/admin/register',[App\Http\Controllers\admin\DashboardController::class,'register']);
+// Route::get('/admin/register',[App\Http\Controllers\admin\DashboardController::class,'register']);
 
 // Auth::routes();
 
