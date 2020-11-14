@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
+// use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +32,7 @@ Route::get('register',[App\Http\Controllers\admin\RegisterController::class,'ind
 
 
 
-Auth::routes();
+//Auth::routes();
 
 // Route::get('/admin/dashboard', [App\Http\Controllers\admin\DashboardController::class, 'index'])->name('home');
 
