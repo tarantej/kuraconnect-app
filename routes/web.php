@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('index');
-// });
+Route::get('/', function () {
+    return view('index');
+});
 
 Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
   //All the admin routes will be defined here...
