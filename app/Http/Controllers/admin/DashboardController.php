@@ -13,44 +13,44 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('admin.dashboard');
+        return view('admin.index');
     }
 
     public function register(Request $request)
     {
 
-        $validator = Validator::make($request->all(), [
-            'name' => 'required',
-            'username' => 'required',
-            'email' => 'required|email',
-            'phone' => 'required',
-            'password' => 'required',
-        ]);
-if ($validator->fails()) {
-            return response()->json(['error'=>$validator->errors()], 401);
-        }
-$input = $request->all();
-        $input['password'] = bcrypt($input['password']);
-        $user = Admin::create($input);
+//         $validator = Validator::make($request->all(), [
+//             'name' => 'required',
+//             'username' => 'required',
+//             'email' => 'required|email',
+//             'phone' => 'required',
+//             'password' => 'required',
+//         ]);
+// if ($validator->fails()) {
+//             return response()->json(['error'=>$validator->errors()], 401);
+//         }
+// $input = $request->all();
+//         $input['password'] = bcrypt($input['password']);
+//         $user = Admin::create($input);
         
-return view('admin.login');
+return view('admin.register');
     }
 
     public function login(Request $request)
     {
 
-        $data = [
-            'username' => $request->username,
-            'password' => $request->password
-        ];
+        // $data = [
+        //     'username' => $request->username,
+        //     'password' => $request->password
+        // ];
 
-        if (auth()->attempt($data)) {
-            return view('admin.dashboard');
-        } else {
-            return redirect('admin.login');
-        }
+        // if (auth()->attempt($data)) {
+        //     return view('admin.dashboard');
+        // } else {
+        //     return redirect('admin.login');
+        // }
 
-        return view('admin.register');
+        return view('admin.login');
 
         
 

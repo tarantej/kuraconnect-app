@@ -1,1 +1,1 @@
-user register
+Admin register
