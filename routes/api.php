@@ -27,12 +27,10 @@ use App\Models\Services;
 Route::prefix('/user')->name('user.')->namespace('User')->group(function(){
   //All the user routes will be defined here...
 
-  Route::get('login', [App\Http\Controllers\API\PassportAuthController::class, 'login']);
-
   Route::post('login', [App\Http\Controllers\API\PassportAuthController::class, 'login']);
   Route::post('register', [App\Http\Controllers\API\PassportAuthController::class, 'register']);
   Route::post('dashboard', [App\Http\Controllers\API\PassportAuthController::class, 'dashboard']);
-
+  
   Route::get('services', [App\Http\Controllers\API\ServiceController::class, 'index']);
   Route::get('services/add', [App\Http\Controllers\API\ServiceController::class, 'store']);
   Route::get('service-listing', [App\Http\Controllers\API\ServiceListingController::class, 'index']);
