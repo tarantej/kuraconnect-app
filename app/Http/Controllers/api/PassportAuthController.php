@@ -55,14 +55,17 @@ $input = $request->all();
             'password' => $request->password
         ];
 
-        if (auth()->attempt($data)) {
-            $token = auth()->user()->createToken('')->accessToken;
-            // return response()->json(['token' => $token], 200);
-            //return response()->json(['message' => 'Welcome to Dashboard'], 200);
-            return view('API.user.dashboard');
-        } else {
-            return response()->json(['error' => 'Not Allowed'], 401);
-        }
+        // if (auth()->attempt($data)) {
+        //     $token = auth()->user()->createToken('')->accessToken;
+        //     // return response()->json(['token' => $token], 200);
+        //     //return response()->json(['message' => 'Welcome to Dashboard'], 200);
+        //     return view('API.user.dashboard');
+        // } else {
+        //     //return response()->json(['error' => 'Not Allowed'], 401);
+        //     return view('API.user.login');
+        // }
+
+        return view('API.user.login');
 
         //return response()->json($data);
 
