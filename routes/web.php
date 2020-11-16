@@ -14,11 +14,9 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-// Route::get('/', function () {
-//     return view('index');
-// });
-
-Route::get('/', [App\Http\Controllers\API\PassportAuthController::class, 'index']);
+Route::get('/', function () {
+    return view('index');
+});
 
 Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
   //All the admin routes will be defined here...
@@ -31,7 +29,7 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
 });
 
 
-//Route::view('/{path?}', 'index');
+Route::view('/{path?}', 'index');
 
 
 Auth::routes(['register' => false]);

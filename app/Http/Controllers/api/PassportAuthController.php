@@ -14,7 +14,7 @@ class PassportAuthController extends Controller
 {
     public function index()
     {
-        return view('api.user.login');
+        return view('API.user.login');
     }
 
     public $successStatus = 200;

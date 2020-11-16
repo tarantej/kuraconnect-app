@@ -27,7 +27,7 @@ use App\Models\Services;
 Route::prefix('/user')->name('user.')->namespace('User')->group(function(){
   //All the user routes will be defined here...
 
-  Route::get('/', [App\Http\Controllers\API\PassportAuthController::class, 'index']);
+  Route::get('login', [App\Http\Controllers\API\PassportAuthController::class, 'login']);
 
   Route::post('login', [App\Http\Controllers\API\PassportAuthController::class, 'login']);
   Route::post('register', [App\Http\Controllers\API\PassportAuthController::class, 'register']);
