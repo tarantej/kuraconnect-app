@@ -29,7 +29,7 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function(){
 });
 
 
-
+Route::view('/{path?}', 'index');
 
 
 Auth::routes(['register' => false]);
