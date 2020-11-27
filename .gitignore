@@ -126,3 +126,5 @@ yarn-debug.log*
 yarn-error.log*
 kuraconnect-ang
 dbcred
+kuraconnect-react
+Oauth Tokens.rtf
