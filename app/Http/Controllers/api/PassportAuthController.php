@@ -87,9 +87,20 @@ $input = $request->all();
     public function dashboard(Request $request)
     {
 $user = $request->user();
-        // the full object of the customer as containted in the able would
+        // the full object of the customer as contained in the able would
         // be available now
 
         return view('API.user.dashboard', compact($user));
+    }
+
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+        $request->session()->flush();
+
+        $request->session()->regenerate();
+        DB::table('sessions')->truncate();
+        return redirect('/');
     }
 }
