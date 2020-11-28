@@ -51,29 +51,60 @@ function UserLogin() {
 
     const classes = useStyles();
 
-    return (
-      <Fragment>
-      <div className="container">
-          <div className="row justify-content-center">
-              <div className="col-md-8">
-                  <div className="card">
-                      <div className="card-header">Example Component</div>
+    return ( 
+    <Fragment>
+        <div className = "container">
+            <div className = "row justify-content-center">
+                <div className = "col-md-8">
+                    <div className = "card">
+                        <div className = "card-header"> Example Component </div>
+                        <div className = "card-body"> I 'm an example component!</div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
 
-                      <div className="card-body">I'm an example component!</div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      </Fragment>
-  );
+        {/* ----------------------------------------------------------------------- */}
+
+        <div>
+
+            <main class = "MuiContainer-root MuiContainer-maxWidthXs userLogin">
+
+                <div className = "jss1">
+                    <img src = { logo } className = "logo2" alt = "logo" />
+                    <div>
+                    <FormControl className = { classes.margin }>
+                    <Input id = "username" placeholder = "Username *" startAdornment = { <InputAdornment position = "start"><Person /></InputAdornment>}/> 
+                    </FormControl>
+                    </div>
+
+                    <div>
+                    <FormControl className = { classes.margin }>
+                    <Input id = "password" placeholder = "Password *" startAdornment = { <InputAdornment position = "start"><Lock /></InputAdornment>}/> 
+                    </FormControl >
+                    </div>
+
+        <BlackButton variant = "contained" color = "primary" size = "large"
+        className = { classes.margin }>Login </BlackButton>
+
+
+        <RedButton variant = "contained" color = "secondary" size = "large" className = { classes.margin } >Emergency </RedButton>
+
+
+            </div>
+        </main>
+
+
+        </div>
+        </Fragment>
 
 
 
     );
 }
 
-export default UserLogin;
+    export default UserLogin;
 
-if (document.getElementById('root')) {
-    ReactDOM.render(<UserLogin />, document.getElementById('root'));
-}
+    if (document.getElementById('root')) {
+        ReactDOM.render( < UserLogin / > , document.getElementById('root'));
+    }
