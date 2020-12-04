@@ -2,16 +2,30 @@
   "git.ignoreLimitWarning": true,
   "sqltools.connections": [
     {
-      "database": "heroku_e72d80efd58bb3f",
-      "driver": "MySQL",
       "mysqlOptions": {
         "authProtocol": "default"
       },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "Kuraconnect",
+      "database": "heroku_e72d80efd58bb3f",
+      "username": "b898d1cb0067c2",
+      "password": "cc51c7f7",
+      "connectionTimeout": 6000
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 100,
+      "server": "us-cdbr-east-02.cleardb.com",
+      "port": 3306,
+      "database": "heroku_e72d80efd58bb3f",
+      "driver": "MySQL",
       "name": "kuraconnectapp",
       "password": "cc51c7f7",
-      "port": 3306,
-      "previewLimit": 50,
-      "server": "us-cdbr-east-02.cleardb.com",
       "username": "b898d1cb0067c2"
     }
   ]
