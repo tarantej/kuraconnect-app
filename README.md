@@ -1,68 +1,102 @@
-This project’s frontend was bootstrapped with [Create React App Laravel](https://github.com/mjsarfatti/create-react-app-laravel).
+# KuraConnect -- Papakura Community
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+**KuraConnect** is a proposed mobile application for the Papakura
+Community, an organization that supports community members who need
+assistance with areas such as financial support, mental wellbeing, food
+supplies, and accommodation.
 
-### `npm start`
+The community currently relies on officials and volunteers to coordinate
+these services. KuraConnect is intended to provide a platform that
+connects community members with volunteers directly, reducing the amount
+of manual coordination required.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## The Current Scenario
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The existing process involves several manual steps:
 
-### `npm test`
+1.  A community member who needs support communicates with community
+    officials by phone, email, or in person.
+2.  Officials manually redirect the request to volunteers who are
+    willing to help.
+3.  Volunteers receive the member's details from community officials and
+    collect information about the member's needs.
+4.  Volunteers provide the required assistance and notify the community
+    officials that the service has been provided.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This process requires significant human effort and time. KuraConnect is
+intended to reduce this manual effort by providing a direct platform for
+community members and volunteers to connect.
 
-### `npm run build`
+## Requirements
 
-Builds the app for production to Laravel’s `public` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The proposed system consists of:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+-   A mobile application for community members
+-   A mobile application for volunteers
+-   An admin portal for community officials to monitor service
+    statistics
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Supported Mobile Platforms
 
-### `npm run eject`
+The mobile applications are intended to support:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-   Android
+-   iOS
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## User Types
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+KuraConnect has three user types:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-   **Users** -- Community members requesting assistance
+-   **Volunteers** -- Community members willing to provide assistance
+-   **Admin** -- Community officials managing and monitoring the
+    platform
 
-## Learn More
+## User Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Community members can:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1.  Register
+2.  Log in
+3.  Request a service
+4.  Mark a service as completed
+5.  View the history of accepted and completed services
+6.  Provide feedback and contact community officials
 
-### Code Splitting
+## Volunteer Features
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Volunteers can:
 
-### Analyzing the Bundle Size
+1.  Register
+2.  Log in
+3.  View the list of services they can provide
+4.  Manage their availability through a calendar/timetable
+5.  Accept requests from community members
+6.  Mark services as completed
+7.  View the history of accepted and completed services
+8.  Provide feedback and contact community officials
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Admin Portal
 
-### Making a Progressive Web App
+The admin portal is intended for community officials and provides
+functionality to:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+1.  Manage users
+2.  Manage volunteers
+3.  Send notifications to users and volunteers
+4.  Manage service lists
+5.  View overall service statistics
 
-### Advanced Configuration
+## Project Goal
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+The goal of KuraConnect is to provide a platform that connects community
+members who need assistance with volunteers who are willing to help,
+while reducing the manual coordination currently required from community
+officials.
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+> **Note:** This README describes the requirements and proposed
+> functionality documented for the Papakura Community project.
+> Implementation technologies and technical architecture are not
+> specified in the source project brief.
